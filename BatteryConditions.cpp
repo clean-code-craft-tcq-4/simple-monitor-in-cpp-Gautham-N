@@ -1,6 +1,6 @@
 #include "BatteryConditions.h"
 #include "iostream"
-#include "BatteryLimitParams.h"
+
 
 
 bool BatteryConditions::checkRange(float actualValue, float minValue, float maxValue)
