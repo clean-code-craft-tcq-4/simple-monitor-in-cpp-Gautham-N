@@ -1,4 +1,5 @@
 #pragma once
+#include "BatteryLimitParams.h"
 class BatteryConditions
 {
 public:
