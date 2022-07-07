@@ -1,5 +1,20 @@
 #include "BatteryConditions.h"
 #include "iostream"
+
+bool BatteryConditions::batteryIsOk(float temperature, float soc, float chargeRate)
+{
+    
+    if (TemperatureCheck(temperature) && SocCheck(soc)
+        && ChargeRateCheck(chargeRate))
+    {
+        return true;
+    }
+    else
+    {
+        return false;
+    }
+}
+
 bool BatteryConditions::TemperatureCheck(int threshold)
 {
     if (threshold < 0 || threshold > 45) {
