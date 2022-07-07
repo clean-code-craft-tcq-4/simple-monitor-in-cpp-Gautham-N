@@ -24,7 +24,7 @@ bool BatteryConditions::batteryIsOk(float temperature, float soc, float chargeRa
 
 bool BatteryConditions::TemperatureCheck(int threshold)
 {
-    if (checkRange(threshold , bms::temperature_min , bms::temperature_max)) {
+    if (checkRange(threshold , 0 , 45)) {
      std::cout << "Temperature out of range!\n";
         return false;
     }
@@ -36,7 +36,7 @@ bool BatteryConditions::TemperatureCheck(int threshold)
 
 bool BatteryConditions::SocCheck(int threshold)
 {
-    if (checkRange(threshold, bms::soc_min, bms::soc_max) ){
+    if (checkRange(threshold, 20, 80) ){
         std::cout << "State of Charge out of range!\n";
         return false;
     }
@@ -48,7 +48,7 @@ bool BatteryConditions::SocCheck(int threshold)
 
 bool BatteryConditions::ChargeRateCheck(int threshold)
 {
-    if (checkRange(threshold, bms::chargeRate_min,bms::chargeRate_max) ){
+    if (checkRange(threshold, 0,0.8) ){
         std::cout << "Charge Rate out of range!\n";
         return false;
     }
