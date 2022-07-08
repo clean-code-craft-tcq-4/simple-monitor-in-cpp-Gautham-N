@@ -12,7 +12,7 @@ bool BatteryConditions::batteryIsOk(float temperature, float soc, float chargeRa
 {
     
     return (TemperatureCheck(temperature) && SocCheck(soc)
-        && ChargeRateCheck(chargeRate))
+        && ChargeRateCheck(chargeRate));
     
 }
 
